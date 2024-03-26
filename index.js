@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         errorMsj.innerHTML = `¡Es ${actualDay} Loca! ¡Raja de acá y volvé el próximo día laboral!`
     }
     // get actual time
-    let startHour = 12
-    let startMin = 29
-    let startSec = 50
-    // let startHour = actualDate.getHours()
-    // let startMin = actualDate.getMinutes()
-    // let startSec = actualDate.getSeconds()
+    // let startHour = 12
+    // let startMin = 29
+    // let startSec = 50
+    let startHour = actualDate.getHours()
+    let startMin = actualDate.getMinutes()
+    let startSec = actualDate.getSeconds()
 
     // set Working end hour at 12:30 PM
     let targetHour = 12;
