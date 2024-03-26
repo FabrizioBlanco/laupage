@@ -16,7 +16,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: changeBackImg infinite ease-in;
+    animation: changeBackImg infinite ease;
     animation-fill-mode: none;
     animation-duration: 70s;
     animation-direction: alternate;
