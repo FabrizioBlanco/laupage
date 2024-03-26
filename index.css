@@ -1,0 +1,164 @@
+:root {
+    color-scheme: light dark;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+body {
+    position: relative;
+    font-size: 16px;
+    padding: 0;
+    height: 97vh;
+    font-family: "Philosopher", sans-serif;
+    background-image: url("img/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: changeBackImg infinite ease;
+    animation-fill-mode: none;
+    animation-duration: 70s;
+    animation-direction: alternate;
+}
+
+
+#clock,
+#hi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.4px;
+    font-size: 1.3em;
+}
+
+#weekday {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+#mainContainer {
+    height: 170px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: hsla(0, 0%, 0%, 0.382);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 30px;
+}
+
+.timerBox {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 120px;
+    width: 90px;
+    border-radius: 10px;
+}
+
+.timeLeft {
+    font-size: 2.5em;
+}
+
+.timerBox span {
+    font-size: 0.76em;
+}
+
+#lightBox {
+    display: none;
+    position: absolute;
+    flex-wrap: wrap;
+    top: -500px;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.526);
+    border-radius: 10px;
+    animation: normal ease;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+}
+
+@keyframes  lightBoxFalling{
+    0% {
+        top: -500px
+    }
+
+    100% {
+        top: 150px
+    }
+}
+
+@keyframes  lightBoxUp{
+    0% {
+        top: 150px
+    }
+
+    100% {
+        top: -500px
+    }
+}
+
+@keyframes changeBackImg {
+    0% {
+        background-image: url("img/1.jpg");
+    }
+
+    14.29% {
+        background-image: url("img/2.jpg");
+    }
+
+    28.57% {
+        background-image: url("img/3.jpg");
+    }
+
+    42.86% {
+        background-image: url("img/4.jpg");
+    }
+
+    57.14% {
+        background-image: url("img/5.jpg");
+    }
+
+    71.43% {
+        background-image: url("img/6.jpg");
+    }
+
+    85.71% {
+        background-image: url("img/7.jpg");
+    }
+
+    100% {
+        background-image: url("img/1.jpg");
+    }
+}
+
+@media screen and (min-width: 420px) {
+    #mainContainer {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    #mainContainer {
+        width: 70%;
+    }
+
+    #lightBox {
+        height: 50vh;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #mainContainer {
+        width: 60%;
+    }
+}
