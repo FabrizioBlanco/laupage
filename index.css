@@ -16,7 +16,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: changeBackImg infinite ease;
+    animation: changeBackImg infinite ease-in;
     animation-fill-mode: none;
     animation-duration: 70s;
     animation-direction: alternate;
@@ -73,8 +73,9 @@ body {
     display: none;
     position: absolute;
     flex-wrap: wrap;
-    top: -500px;
+    top: -710px;
     min-width: 300px;
+    max-height: 300px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -88,21 +89,21 @@ body {
 
 @keyframes  lightBoxFalling{
     0% {
-        top: -500px
+        top: -710px
     }
 
     100% {
-        top: 150px
+        top: 200px
     }
 }
 
 @keyframes  lightBoxUp{
     0% {
-        top: 150px
+        top: 200px
     }
 
     100% {
-        top: -500px
+        top: -710px
     }
 }
 
